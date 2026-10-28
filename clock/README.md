@@ -1,14 +1,18 @@
-Clock ticking for ChucK
+# Clock ticking for ChucK
 
 Run from the repository root:
 
-  chuck clock/clock-ticking.ck
+```sh
+chuck clock/clock-ticking.ck
+```
 
 Stop with Ctrl-C. No samples or external chugins are needed.
 
 Play the included five-tick synthesized render:
 
-  afplay clock/clock-ticking.wav
+```sh
+afplay clock/clock-ticking.wav
+```
 
 This version models the Clock Ticking.wav bundled with Session. It synthesizes
 fresh noise through 32 resonators and applies measured, interpolated frequency
@@ -17,6 +21,7 @@ and does not need Session installed. The output is a mono approximation;
 it does not reproduce the original recording's exact waveform or stereo space.
 
 Reference measurements:
+
 - Five ticks in a five-second stereo, 44.1 kHz recording: one tick per second.
 - A lighter contact precedes the main impact by approximately 10 ms.
 - Main impact energy is concentrated around 1.2-1.4 kHz and 2.4-2.8 kHz.
@@ -24,11 +29,16 @@ Reference measurements:
 - Strong transient decay over about 30 ms, with a much quieter tail.
 
 Optional colon-separated arguments:
-  milliseconds between beats : volume (0..1) : seconds (0 = forever) : WAV path
 
-  chuck clock/clock-ticking.ck:1000:0.4
-  chuck clock/clock-ticking.ck:1000:0.65:10
-  chuck --silent clock/clock-ticking.ck:1000:0.65:10:/tmp/clock-ticking.wav
+```text
+milliseconds between beats : volume (0..1) : seconds (0 = forever) : WAV path
+```
+
+```sh
+chuck clock/clock-ticking.ck:1000:0.4
+chuck clock/clock-ticking.ck:1000:0.65:10
+chuck --silent clock/clock-ticking.ck:1000:0.65:10:/tmp/clock-ticking.wav
+```
 
 Minimum interval: 300 ms. Default volume: 0.65. Default duration: infinite.
 Finite renders include a 300 ms tail. clock-ticking.wav is a five-tick synthesized
