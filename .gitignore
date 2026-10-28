@@ -80,6 +80,9 @@ dist/
 !clock/clock-ticking.wav
 # Rendered video stays local; commit the renderer and still preview.
 /clock/audiogram-video/*.mp4
+/clock/long-form/*.mp4
+/clock/clock-ticking-*hr.wav
+/clock/long-form/clock-*/
 **/backups/
 # Private flash backups live here; only their documentation is versioned.
 /m5stack/m5stack-core-basic-firmware/*
