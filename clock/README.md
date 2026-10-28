@@ -8,7 +8,7 @@ chuck clock/clock-ticking.ck
 
 Stop with Ctrl-C. No samples or external chugins are needed.
 
-Play the included five-tick synthesized render:
+Play the included ten-second, ten-tick synthesized render:
 
 ```sh
 afplay clock/clock-ticking.wav
@@ -41,8 +41,17 @@ chuck --silent clock/clock-ticking.ck:1000:0.65:10:/tmp/clock-ticking.wav
 ```
 
 Minimum interval: 300 ms. Default volume: 0.65. Default duration: infinite.
-Finite renders include a 300 ms tail. clock-ticking.wav is a five-tick synthesized
-example at the default settings. --silent renders without playing audio.
+Finite renders include a 300 ms tail. `clock-ticking.wav` contains ten ticks at
+the default settings, trimmed to exactly ten seconds. `--silent` renders without
+playing audio. To regenerate the distributed WAV:
+
+```sh
+chuck --silent clock/clock-ticking.ck:1000:0.65:10:/tmp/clock-ticking-render.wav
+ffmpeg -y -i /tmp/clock-ticking-render.wav -t 10 -c:a pcm_s16le clock/clock-ticking.wav
+```
+
+This trims only the extra trailing silence after the ten-second render. Each
+render synthesizes new noise, so individual tick waveforms vary slightly.
 
 No source or separate license for Session's reference recording was identified.
 The original WAV is not included here.
