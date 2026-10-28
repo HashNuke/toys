@@ -79,6 +79,9 @@ dist/
 # The synthesized clock audio is a distribution asset.
 !clock/clock-ticking.wav
 **/backups/
+# Private flash backups live here; only their documentation is versioned.
+/firmware-backups/*
+!/firmware-backups/README.md
 core
 core.*
 .devices/

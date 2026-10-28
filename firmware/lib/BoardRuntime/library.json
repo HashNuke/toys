@@ -1,0 +1,8 @@
+{
+  "name": "BoardRuntime",
+  "version": "1.0.0",
+  "dependencies": {
+    "h2zero/NimBLE-Arduino": "2.3.6",
+    "bblanchon/ArduinoJson": "7.4.2"
+  }
+}
