@@ -1,0 +1,19 @@
+[project]
+name = "toys"
+version = "0.1.0"
+description = "A playground for hardware experiments and small projects"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "bleak==2.1.1",
+    "cryptography==50.0.2",
+    "esptool==4.9.0",
+    "platformio==6.2.0",
+    "pyserial==3.5",
+    "pytest>=8,<10",
+]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
