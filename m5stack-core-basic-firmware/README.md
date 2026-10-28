@@ -1,4 +1,4 @@
-# M5Stack Core Basic recovery backups
+# M5Stack Core Basic original firmware
 
 These private flash snapshots were saved before installing this project's custom
 firmware. They belong to this device:
@@ -46,7 +46,7 @@ a170547a56ad2da47997c688fbb2730710d3aa7d4c689f7d701516307309be0a  original-first
 From the repository root, using the correct serial port for this device:
 
 ```sh
-uv run python -m esptool --port /dev/cu.usbserial-01CDD34C --baud 230400 write_flash 0 m5stack-core-basic-backups/hw-revision-unknown/original-fw-version-unknown/original-first-4mb.bin
+uv run python -m esptool --port /dev/cu.usbserial-01CDD34C --baud 230400 write_flash 0 m5stack-core-basic-firmware/hw-revision-unknown/original-fw-version-unknown/original-first-4mb.bin
 ```
 
 This uses the ESP32 ROM bootloader and overwrites the current firmware and saved

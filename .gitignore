@@ -80,8 +80,8 @@ dist/
 !clock/clock-ticking.wav
 **/backups/
 # Private flash backups live here; only their documentation is versioned.
-/m5stack-core-basic-backups/*
-!/m5stack-core-basic-backups/README.md
+/m5stack-core-basic-firmware/*
+!/m5stack-core-basic-firmware/README.md
 core
 core.*
 .devices/
