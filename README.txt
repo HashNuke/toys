@@ -13,7 +13,7 @@ directory; see m5stack/README.md for the project layout and build commands.
 The Hacker News project's README.txt describes Wi-Fi setup, buttons, initial
 installation, the serial updater, and restoration of the original firmware.
 
-Every future board app inherits firmware/common.ini and BoardApp.h; copy
+Every future board app inherits shared-board-support/common.ini and BoardApp.h; copy
 m5stack-template as a starting point. board_runtime/README.txt documents the
 signed, encrypted Bluetooth command client and shared sender key.
 

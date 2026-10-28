@@ -14,7 +14,7 @@ from .protocol import SERVICE, HELLO, COMMAND, RESULT, make_request, public_byte
 
 ROOT = Path(__file__).resolve().parents[2]
 PRIVATE = ROOT / ".devices"
-IDENTITY = ROOT / "m5stack/firmware/identity/BoardIdentity.h"
+IDENTITY = ROOT / "m5stack/shared-board-support/identity/BoardIdentity.h"
 
 def save_private(path, contents):
     path.parent.mkdir(parents=True, exist_ok=True, mode=0o700)

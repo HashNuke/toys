@@ -1,6 +1,6 @@
 Shared M5Stack runtime
 
-Every program uses firmware/common.ini and includes BoardApp.h. Application code
+Every program uses shared-board-support/common.ini and includes BoardApp.h. Application code
 implements appSetup() and appLoop(). BoardApp owns setup()/loop(), servicing
 serial firmware updates and authenticated BLE commands before running the app.
 The PlatformIO pre-build check rejects programs that omit these entry points.
@@ -53,7 +53,7 @@ requires replacing the shared key on all senders and the board. This project
 does not automate key rotation. Do not regenerate enrollment files casually.
 
 The board also has a distinct private P-256 encryption identity, stored in NVS
-and initially seeded from the ignored firmware/identity/BoardIdentity.h. This
+and initially seeded from the ignored shared-board-support/identity/BoardIdentity.h. This
 key stays off sender devices; device.json contains only its pinned public key.
 The laptop's ../.devices/<board-id>.pem is a private enrollment backup.
 These private files and raw flash backups are excluded from Git. This is a

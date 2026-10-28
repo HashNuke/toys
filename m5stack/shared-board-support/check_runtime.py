@@ -2,7 +2,7 @@ Import("env")
 from pathlib import Path
 project = Path(env.subst("$PROJECT_DIR"))
 root = project.parent
-identity = root / "firmware/identity"
+identity = root / "shared-board-support/identity"
 if not (identity / "BoardIdentity.h").is_file():
     raise RuntimeError("Enroll the board first: uv run python -m board_runtime init")
 env.Append(CPPPATH=[str(identity)])

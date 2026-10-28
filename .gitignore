@@ -56,7 +56,7 @@ cython_debug/
 .envrc
 .pypirc
 .streamlit/secrets.toml
-# Keep uv.lock and source libraries (including m5stack/firmware/lib/) trackable.
+# Keep uv.lock and source libraries (including m5stack/shared-board-support/lib/) trackable.
 
 # macOS and embedded/native projects.
 .DS_Store
@@ -85,4 +85,4 @@ dist/
 core
 core.*
 .devices/
-m5stack/firmware/identity/BoardIdentity.h
+m5stack/shared-board-support/identity/BoardIdentity.h

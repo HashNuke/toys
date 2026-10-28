@@ -16,7 +16,7 @@ firmware. They belong to this device:
 The PlatformIO target is a build target, not a hardware revision. The original
 firmware is the software present when these snapshots were taken; its vendor
 and factory provenance have not been verified. It is separate from the custom
-runtime in `firmware/`. Its version is not the version of that custom runtime.
+runtime in `shared-board-support/`. Its version is not the version of that custom runtime.
 
 The files live under `hw-revision-unknown/original-fw-version-unknown/` so their
 unverified versions remain explicit. Rename those components only when the
