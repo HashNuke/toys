@@ -43,7 +43,7 @@ a170547a56ad2da47997c688fbb2730710d3aa7d4c689f7d701516307309be0a  original-first
 
 ## Restore
 
-From the repository root, using the correct serial port for this device:
+From the m5stack/ directory, using the correct serial port for this device:
 
 ```sh
 uv run python -m esptool --port /dev/cu.usbserial-01CDD34C --baud 230400 write_flash 0 m5stack-core-basic-firmware/hw-revision-unknown/original-fw-version-unknown/original-first-4mb.bin
